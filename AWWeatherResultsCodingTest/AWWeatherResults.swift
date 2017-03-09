@@ -1,6 +1,6 @@
 //
 //  AWWeatherResults.swift
-//  AWCodingAssessmentBBVA
+//  
 //
 //  Created by Augustus on 3/8/17.
 //  Copyright © 2017 Augustus. All rights reserved.
