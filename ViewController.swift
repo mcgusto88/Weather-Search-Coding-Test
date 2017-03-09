@@ -2,7 +2,7 @@
 //  ViewController.swift
 //
 //
-//  
+//
 //  Copyright © 2017 Augustus. All rights reserved.
 //
 
@@ -21,6 +21,7 @@ class ViewController: UIViewController,UpdateTableViewProtocol {
         print("Button Clicked")
         request?.getWeatherResults(urlString: urlString)
     }
+    
     @IBOutlet weak var cityLbl: UILabel!
     @IBOutlet weak var searchTF: UITextField!
     @IBOutlet weak var weatherLbl: UILabel!
@@ -28,7 +29,6 @@ class ViewController: UIViewController,UpdateTableViewProtocol {
     @IBOutlet weak var weatherImage: UIImageView!
     
     var weatherDict:Dictionary<String,Any>?
-    
     var request:AWUrlRequest?
     
     override func viewDidLoad() {
@@ -49,8 +49,6 @@ class ViewController: UIViewController,UpdateTableViewProtocol {
             self.weatherImage.image = savedWeatherResult.weatherImage
             self.cityLbl.text = savedWeatherResult.city
         }
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -74,10 +72,9 @@ class ViewController: UIViewController,UpdateTableViewProtocol {
         let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: weatherResults!)
         UserDefaults.standard.set(encodedData, forKey: Constants.WEATHERRESULTS)
         searchTF.text = ""
-
-        
-
+    
     }
+    
     //Used to check if there is a value stored locally to be retreived
     func userAlreadyExist(kUsernameKey: String) -> Bool {
         return UserDefaults.standard.object(forKey: Constants.WEATHERRESULTS) != nil

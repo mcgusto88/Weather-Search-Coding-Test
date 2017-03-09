@@ -87,7 +87,6 @@
 				02B584621E71A6A800BB6746 /* AWAppDelegate */,
 				02B584611E71A68E00BB6746 /* AWConstants */,
 				02B584601E71A67700BB6746 /* AWModels */,
-				02B5845F1E71A64E00BB6746 /* AWImages */,
 				02B5845E1E71A63900BB6746 /* AWUtils */,
 				02B5845D1E71A62D00BB6746 /* AWStoryboards */,
 				02B5845C1E71A61800BB6746 /* AWViewControllers */,
@@ -157,13 +156,6 @@
 				0284426E1E709170007A37CD /* AWUrlRequest.swift */,
 			);
 			name = AWUtils;
-			sourceTree = "<group>";
-		};
-		02B5845F1E71A64E00BB6746 /* AWImages */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = AWImages;
 			sourceTree = "<group>";
 		};
 		02B584601E71A67700BB6746 /* AWModels */ = {
