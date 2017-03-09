@@ -81,9 +81,8 @@ class ViewController: UIViewController,UpdateTableViewProtocol,UITextFieldDelega
         if(self.userAlreadyExist(kUsernameKey: Constants.WEATHERRESULTS)){
             let decoded = UserDefaults.standard.value(forKey:Constants.WEATHERRESULTS) as! Data
             let savedWeatherResult = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! AWWeatherResults
-            self.weatherLbl.text = savedWeatherResult.weather
-            self.temperatureLbl.text = savedWeatherResult.temperature
-            self.weatherLbl.text = savedWeatherResult.weather
+            self.weatherLbl.text = "Weather: \(savedWeatherResult.weather!)"
+            self.temperatureLbl.text = "Temperature: \(savedWeatherResult.temperature!)"
             self.weatherImage.image = savedWeatherResult.weatherImage
             self.cityLbl.text = savedWeatherResult.city
         }
