@@ -58,7 +58,7 @@ class AWUrlRequest: NSObject {
                         }
                         //Delegat Method used to Update UI
                         DispatchQueue.main.async {
-                            self.delegate.updateUserInterface()()
+                            self.delegate.updateUserInterface()
                         }
 
                        
