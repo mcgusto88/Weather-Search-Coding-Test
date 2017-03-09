@@ -7,6 +7,8 @@
 //
 
 import UIKit
+//Model Class use for consuming JSON 
+//and also Conforms to NSCoding for Archiving Class Objects
 
 class AWWeatherResults: NSObject, NSCoding {
     var weather:String?

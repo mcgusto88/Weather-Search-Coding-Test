@@ -38,11 +38,11 @@
 
 /* Begin PBXFileReference section */
 		028442671E709147007A37CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0284426C1E709159007A37CD /* AWWeatherResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWWeatherResults.swift; sourceTree = "<group>"; };
-		0284426E1E709170007A37CD /* AWUrlRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWUrlRequest.swift; sourceTree = "<group>"; };
-		028442701E70917A007A37CD /* AWWeatherAppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWWeatherAppConstants.swift; sourceTree = "<group>"; };
-		028442721E70923B007A37CD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		028442741E712977007A37CD /* WeatherPlaceholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WeatherPlaceholder.jpg; sourceTree = "<group>"; };
+		0284426C1E709159007A37CD /* AWWeatherResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWWeatherResults.swift; path = AWWeatherResultsCodingTest/AWWeatherResults.swift; sourceTree = "<group>"; };
+		0284426E1E709170007A37CD /* AWUrlRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWUrlRequest.swift; path = AWWeatherResultsCodingTest/AWUrlRequest.swift; sourceTree = "<group>"; };
+		028442701E70917A007A37CD /* AWWeatherAppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWWeatherAppConstants.swift; path = AWWeatherResultsCodingTest/AWWeatherAppConstants.swift; sourceTree = "<group>"; };
+		028442721E70923B007A37CD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AWWeatherResultsCodingTest/AppDelegate.swift; sourceTree = "<group>"; };
+		028442741E712977007A37CD /* WeatherPlaceholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WeatherPlaceholder.jpg; path = AWWeatherResultsCodingTest/WeatherPlaceholder.jpg; sourceTree = "<group>"; };
 		028529CC1E708F1D0002A008 /* AWWeatherResultsCodingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWWeatherResultsCodingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		028529D61E708F1D0002A008 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		028529DB1E708F1D0002A008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		028529EB1E708F1D0002A008 /* AWWeatherResultsCodingTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWWeatherResultsCodingTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		028529EF1E708F1D0002A008 /* AWWeatherResultsCodingTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWWeatherResultsCodingTestUITests.swift; sourceTree = "<group>"; };
 		028529F11E708F1D0002A008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		028529FD1E708FD40002A008 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		028529FD1E708FD40002A008 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +83,14 @@
 		028529C31E708F1D0002A008 = {
 			isa = PBXGroup;
 			children = (
+				02B584631E71A6BA00BB6746 /* AWImages */,
+				02B584621E71A6A800BB6746 /* AWAppDelegate */,
+				02B584611E71A68E00BB6746 /* AWConstants */,
+				02B584601E71A67700BB6746 /* AWModels */,
+				02B5845F1E71A64E00BB6746 /* AWImages */,
+				02B5845E1E71A63900BB6746 /* AWUtils */,
+				02B5845D1E71A62D00BB6746 /* AWStoryboards */,
+				02B5845C1E71A61800BB6746 /* AWViewControllers */,
 				028529CD1E708F1D0002A008 /* Products */,
 				028529CE1E708F1D0002A008 /* AWWeatherResultsCodingTest */,
 				028529E31E708F1D0002A008 /* AWWeatherResultsCodingTestTests */,
@@ -103,13 +111,6 @@
 		028529CE1E708F1D0002A008 /* AWWeatherResultsCodingTest */ = {
 			isa = PBXGroup;
 			children = (
-				028442741E712977007A37CD /* WeatherPlaceholder.jpg */,
-				028442721E70923B007A37CD /* AppDelegate.swift */,
-				0284426E1E709170007A37CD /* AWUrlRequest.swift */,
-				0284426C1E709159007A37CD /* AWWeatherResults.swift */,
-				028442681E709147007A37CD /* Main.storyboard */,
-				028529FD1E708FD40002A008 /* ViewController.swift */,
-				028442701E70917A007A37CD /* AWWeatherAppConstants.swift */,
 				028529D61E708F1D0002A008 /* Assets.xcassets */,
 				028529DB1E708F1D0002A008 /* Info.plist */,
 			);
@@ -132,6 +133,69 @@
 				028529F11E708F1D0002A008 /* Info.plist */,
 			);
 			path = AWWeatherResultsCodingTestUITests;
+			sourceTree = "<group>";
+		};
+		02B5845C1E71A61800BB6746 /* AWViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				028529FD1E708FD40002A008 /* ViewController.swift */,
+			);
+			name = AWViewControllers;
+			sourceTree = "<group>";
+		};
+		02B5845D1E71A62D00BB6746 /* AWStoryboards */ = {
+			isa = PBXGroup;
+			children = (
+				028442681E709147007A37CD /* Main.storyboard */,
+			);
+			name = AWStoryboards;
+			sourceTree = "<group>";
+		};
+		02B5845E1E71A63900BB6746 /* AWUtils */ = {
+			isa = PBXGroup;
+			children = (
+				0284426E1E709170007A37CD /* AWUrlRequest.swift */,
+			);
+			name = AWUtils;
+			sourceTree = "<group>";
+		};
+		02B5845F1E71A64E00BB6746 /* AWImages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AWImages;
+			sourceTree = "<group>";
+		};
+		02B584601E71A67700BB6746 /* AWModels */ = {
+			isa = PBXGroup;
+			children = (
+				0284426C1E709159007A37CD /* AWWeatherResults.swift */,
+			);
+			name = AWModels;
+			sourceTree = "<group>";
+		};
+		02B584611E71A68E00BB6746 /* AWConstants */ = {
+			isa = PBXGroup;
+			children = (
+				028442701E70917A007A37CD /* AWWeatherAppConstants.swift */,
+			);
+			name = AWConstants;
+			sourceTree = "<group>";
+		};
+		02B584621E71A6A800BB6746 /* AWAppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				028442721E70923B007A37CD /* AppDelegate.swift */,
+			);
+			name = AWAppDelegate;
+			sourceTree = "<group>";
+		};
+		02B584631E71A6BA00BB6746 /* AWImages */ = {
+			isa = PBXGroup;
+			children = (
+				028442741E712977007A37CD /* WeatherPlaceholder.jpg */,
+			);
+			name = AWImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +379,7 @@
 				028442671E709147007A37CD /* Base */,
 			);
 			name = Main.storyboard;
-			path = ../../../Downloads/WeatherCodingAssignment/AWCodingAssessmentBBVA;
+			path = ../../Downloads/WeatherCodingAssignment/AWCodingAssessmentBBVA;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

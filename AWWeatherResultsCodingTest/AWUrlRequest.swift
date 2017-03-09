@@ -8,8 +8,9 @@
 
 import UIKit
 protocol UpdateTableViewProtocol {
-    func updateTableView()
+    func updateUserInterface()
 }
+//Class used to make URL request and Parse JSON data
 class AWUrlRequest: NSObject {
     
     var weatherDict = Dictionary<String,Any>()
@@ -25,15 +26,15 @@ class AWUrlRequest: NSObject {
         self.weatherDict = Dictionary()
         
     }
-    func getStateArray(urlString:String!){
+    func getWeatherResults(urlString:String!){
         let theUrl = URL(string:(urlString?.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!)!)!
 
-        
+        //Used to make URL Request
         let task = URLSession.shared.dataTask(with: theUrl as URL) { (data, response, error) -> Void in
             print("Task completed")
             if let data = data {
                 do {
-                    
+                    //Used to Parse JSON
                     if let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                         if let jsonObj = jsonResult["weather"] as? NSArray{
                             let weatherDict = jsonObj.firstObject as! NSDictionary
@@ -41,6 +42,8 @@ class AWUrlRequest: NSObject {
                             self.weatherDict["weather"] = weatherDict["main"] as? String
                             if let tempWeatherDict = weatherDict["icon"] {
                                 self.weatherDict["icon"] = tempWeatherDict as? String
+                                
+                                //Get Image back from URL
                                 self.getImage(imageIcon:self.weatherDict["icon"] as! String)
                             }
                         }
@@ -53,8 +56,9 @@ class AWUrlRequest: NSObject {
 
                             }
                         }
+                        //Delegat Method used to Update UI
                         DispatchQueue.main.async {
-                            self.delegate.updateTableView()
+                            self.delegate.updateUserInterface()()
                         }
 
                        
@@ -70,7 +74,7 @@ class AWUrlRequest: NSObject {
         task.resume()
     }
     
-    
+    //Funtion used to convert Data from URL to UIImage
     func getImage(imageIcon:String)
     {
         

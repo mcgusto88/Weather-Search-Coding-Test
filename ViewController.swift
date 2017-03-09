@@ -19,7 +19,7 @@ class ViewController: UIViewController,UpdateTableViewProtocol {
         let urlString = "http://api.openweathermap.org/data/2.5/weather?q=\(self.searchTF.text)&APPID=\(Constants.APIKEY)"
         request?.url = urlString
         print("Button Clicked")
-        request?.getStateArray(urlString: urlString)
+        request?.getWeatherResults(urlString: urlString)
     }
     @IBOutlet weak var cityLbl: UILabel!
     @IBOutlet weak var searchTF: UITextField!
@@ -35,6 +35,8 @@ class ViewController: UIViewController,UpdateTableViewProtocol {
         super.viewDidLoad()
         initializeComponents()
     }
+    
+    //Initialize Components and Retrieve Data From Local Storage
     func initializeComponents() {
         request = AWUrlRequest()
         request?.delegate = self
@@ -55,8 +57,9 @@ class ViewController: UIViewController,UpdateTableViewProtocol {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func updateTableView() {
-        //self.weatherDict = (request?.weatherDict)!
+    
+    func updateUserInterface() {
+
         let weatherResults = request?.weatherResultsObect()
         weatherResults?.city = self.searchTF.text
         if let temperature = weatherResults?.temperature{
@@ -75,6 +78,7 @@ class ViewController: UIViewController,UpdateTableViewProtocol {
         
 
     }
+    //Used to check if there is a value stored locally to be retreived
     func userAlreadyExist(kUsernameKey: String) -> Bool {
         return UserDefaults.standard.object(forKey: Constants.WEATHERRESULTS) != nil
     }
