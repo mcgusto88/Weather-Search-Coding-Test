@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		028442661E709137007A37CD /* AWWeatherSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028442651E709137007A37CD /* AWWeatherSearchCell.swift */; };
 		028442691E709147007A37CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028442681E709147007A37CD /* Main.storyboard */; };
-		0284426B1E709153007A37CD /* AWWeatherResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284426A1E709153007A37CD /* AWWeatherResultsCell.swift */; };
 		0284426D1E709159007A37CD /* AWWeatherResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284426C1E709159007A37CD /* AWWeatherResults.swift */; };
 		0284426F1E709170007A37CD /* AWUrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284426E1E709170007A37CD /* AWUrlRequest.swift */; };
 		028442711E70917A007A37CD /* AWWeatherAppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028442701E70917A007A37CD /* AWWeatherAppConstants.swift */; };
@@ -39,9 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		028442651E709137007A37CD /* AWWeatherSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWWeatherSearchCell.swift; sourceTree = "<group>"; };
 		028442671E709147007A37CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0284426A1E709153007A37CD /* AWWeatherResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWWeatherResultsCell.swift; sourceTree = "<group>"; };
 		0284426C1E709159007A37CD /* AWWeatherResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWWeatherResults.swift; sourceTree = "<group>"; };
 		0284426E1E709170007A37CD /* AWUrlRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWUrlRequest.swift; sourceTree = "<group>"; };
 		028442701E70917A007A37CD /* AWWeatherAppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWWeatherAppConstants.swift; sourceTree = "<group>"; };
@@ -111,10 +107,8 @@
 				028442721E70923B007A37CD /* AppDelegate.swift */,
 				0284426E1E709170007A37CD /* AWUrlRequest.swift */,
 				0284426C1E709159007A37CD /* AWWeatherResults.swift */,
-				0284426A1E709153007A37CD /* AWWeatherResultsCell.swift */,
 				028442681E709147007A37CD /* Main.storyboard */,
 				028529FD1E708FD40002A008 /* ViewController.swift */,
-				028442651E709137007A37CD /* AWWeatherSearchCell.swift */,
 				028442701E70917A007A37CD /* AWWeatherAppConstants.swift */,
 				028529D61E708F1D0002A008 /* Assets.xcassets */,
 				028529DB1E708F1D0002A008 /* Info.plist */,
@@ -276,8 +270,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				028442711E70917A007A37CD /* AWWeatherAppConstants.swift in Sources */,
-				028442661E709137007A37CD /* AWWeatherSearchCell.swift in Sources */,
-				0284426B1E709153007A37CD /* AWWeatherResultsCell.swift in Sources */,
 				028529FE1E708FD40002A008 /* ViewController.swift in Sources */,
 				028442731E70923B007A37CD /* AppDelegate.swift in Sources */,
 				0284426D1E709159007A37CD /* AWWeatherResults.swift in Sources */,

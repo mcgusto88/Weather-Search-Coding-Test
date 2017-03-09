@@ -13,4 +13,9 @@ struct Constants {
     static let SEARCHCELLIDENTIFIER = "searchCell"
     static let WEATHERCELLIDENTIFIER = "weatherDetailsCell"
     static let PNG = ".png"
+    static let WEATHER = "weather"
+    static let TEMPERATURE = "temperature"
+    static let WEATHERIMAGE = "weatherImage"
+    static let WEATHERRESULTS = "weatherResults"
+    static let CITY = "city"
 }
