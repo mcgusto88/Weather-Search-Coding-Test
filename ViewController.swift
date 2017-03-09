@@ -18,7 +18,6 @@ class ViewController: UIViewController,UpdateTableViewProtocol,UITextFieldDelega
         }
         let urlString = "http://api.openweathermap.org/data/2.5/weather?q=\(self.searchTF.text)&APPID=\(Constants.APIKEY)"
         request?.url = urlString
-        print("Button Clicked")
         request?.getWeatherResults(urlString: urlString)
     }
     

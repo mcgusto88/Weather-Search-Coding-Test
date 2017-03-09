@@ -33,14 +33,12 @@ class AWUrlRequest: NSObject {
 
         //Used to make URL Request
         let task = URLSession.shared.dataTask(with: theUrl as URL) { (data, response, error) -> Void in
-            print("Task completed")
             if let data = data {
                 do {
                     //Used to Parse JSON
                     if let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                         if let jsonObj = jsonResult["weather"] as? NSArray{
                             let weatherDict = jsonObj.firstObject as! NSDictionary
-                            print(weatherDict["main"]!)
                             self.weatherDict["weather"] = weatherDict["main"] as? String
                             if let tempWeatherDict = weatherDict["icon"] {
                                 self.weatherDict["icon"] = tempWeatherDict as? String
@@ -52,7 +50,6 @@ class AWUrlRequest: NSObject {
                         if let jsonObj = jsonResult["main"] as? NSDictionary{
                             if let temp = jsonObj["temp"]{
                             self.weatherDict["temp"] = String(describing: temp)
-                                print(temp)
                             let tempDict = AWWeatherResults.init(self.weatherDict )
                                 self.weatherResult = tempDict
 
@@ -83,7 +80,6 @@ class AWUrlRequest: NSObject {
         let url = NSURL(string:self.imageUrl! + imageIcon + Constants.PNG)
         let data = try? Data(contentsOf: url! as URL)
         self.weatherDict["image"] = UIImage(data: data!)
-        print(data!)
     }
     
     func weatherResultsObect()-> AWWeatherResults{
