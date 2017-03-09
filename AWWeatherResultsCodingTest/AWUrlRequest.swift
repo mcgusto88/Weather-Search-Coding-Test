@@ -7,9 +7,11 @@
 //
 
 import UIKit
+
 protocol UpdateTableViewProtocol {
     func updateUserInterface()
 }
+
 //Class used to make URL request and Parse JSON data
 class AWUrlRequest: NSObject {
     
@@ -19,14 +21,14 @@ class AWUrlRequest: NSObject {
     var delegate:UpdateTableViewProtocol! = nil
     var weatherResult = AWWeatherResults()
 
-    
-    convenience init(url:String){
+    convenience init(url:String) {
         self.init()
         self.url = url
         self.weatherDict = Dictionary()
         
     }
-    func getWeatherResults(urlString:String!){
+    
+    func getWeatherResults(urlString:String!) {
         let theUrl = URL(string:(urlString?.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!)!)!
 
         //Used to make URL Request
@@ -87,6 +89,4 @@ class AWUrlRequest: NSObject {
     func weatherResultsObect()-> AWWeatherResults{
         return self.weatherResult
     }
-
-    
 }

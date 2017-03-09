@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UpdateTableViewProtocol {
+class ViewController: UIViewController,UpdateTableViewProtocol,UITextFieldDelegate {
     
     
     @IBAction func searchBtn(_ sender: Any) {
@@ -40,15 +40,8 @@ class ViewController: UIViewController,UpdateTableViewProtocol {
     func initializeComponents() {
         request = AWUrlRequest()
         request?.delegate = self
-        if(self.userAlreadyExist(kUsernameKey: Constants.WEATHERRESULTS)){
-        let decoded = UserDefaults.standard.value(forKey:Constants.WEATHERRESULTS) as! Data
-        let savedWeatherResult = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! AWWeatherResults
-            self.weatherLbl.text = savedWeatherResult.weather
-            self.temperatureLbl.text = savedWeatherResult.temperature
-            self.weatherLbl.text = savedWeatherResult.weather
-            self.weatherImage.image = savedWeatherResult.weatherImage
-            self.cityLbl.text = savedWeatherResult.city
-        }
+        self.searchTF.delegate = self
+        self.loadLocalWeatherResult()
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,5 +71,21 @@ class ViewController: UIViewController,UpdateTableViewProtocol {
     //Used to check if there is a value stored locally to be retreived
     func userAlreadyExist(kUsernameKey: String) -> Bool {
         return UserDefaults.standard.object(forKey: Constants.WEATHERRESULTS) != nil
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
+    }
+    func loadLocalWeatherResult() {
+        if(self.userAlreadyExist(kUsernameKey: Constants.WEATHERRESULTS)){
+            let decoded = UserDefaults.standard.value(forKey:Constants.WEATHERRESULTS) as! Data
+            let savedWeatherResult = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! AWWeatherResults
+            self.weatherLbl.text = savedWeatherResult.weather
+            self.temperatureLbl.text = savedWeatherResult.temperature
+            self.weatherLbl.text = savedWeatherResult.weather
+            self.weatherImage.image = savedWeatherResult.weatherImage
+            self.cityLbl.text = savedWeatherResult.city
+        }
     }
 }

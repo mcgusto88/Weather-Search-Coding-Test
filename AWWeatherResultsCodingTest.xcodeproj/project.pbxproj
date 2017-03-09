@@ -17,6 +17,7 @@
 		028529E51E708F1D0002A008 /* AWWeatherResultsCodingTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028529E41E708F1D0002A008 /* AWWeatherResultsCodingTestTests.swift */; };
 		028529F01E708F1D0002A008 /* AWWeatherResultsCodingTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028529EF1E708F1D0002A008 /* AWWeatherResultsCodingTestUITests.swift */; };
 		028529FE1E708FD40002A008 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028529FD1E708FD40002A008 /* ViewController.swift */; };
+		02B584651E71B61900BB6746 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B584641E71B61900BB6746 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		028529EF1E708F1D0002A008 /* AWWeatherResultsCodingTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWWeatherResultsCodingTestUITests.swift; sourceTree = "<group>"; };
 		028529F11E708F1D0002A008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028529FD1E708FD40002A008 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		02B584641E71B61900BB6746 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		02B5845D1E71A62D00BB6746 /* AWStoryboards */ = {
 			isa = PBXGroup;
 			children = (
+				02B584641E71B61900BB6746 /* Launch Screen.storyboard */,
 				028442681E709147007A37CD /* Main.storyboard */,
 			);
 			name = AWStoryboards;
@@ -300,6 +303,7 @@
 			files = (
 				028529D71E708F1D0002A008 /* Assets.xcassets in Resources */,
 				028442691E709147007A37CD /* Main.storyboard in Resources */,
+				02B584651E71B61900BB6746 /* Launch Screen.storyboard in Resources */,
 				028442751E712977007A37CD /* WeatherPlaceholder.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
